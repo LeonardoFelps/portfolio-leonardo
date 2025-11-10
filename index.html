@@ -130,19 +130,126 @@
   </section>
 
   <!-- === SOBRE === -->
-  <section id="sobre" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center max-w-4xl mx-auto" data-aos="fade-up">
-    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-10 fade-in-up">Sobre Mim</h2>
-    <p class="font-rajdhani text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-      Sou um desenvolvedor <span class="text-sky-400">Full-Stack</span> com mais de 3 anos de experiência,
-      especializado em soluções web de alta performance, automação de processos e integração de APIs.
-      Tenho profundo interesse em segurança da informação e análise de dados.
-    </p>
-    <p class="mt-6 font-rajdhani text-base sm:text-lg md:text-xl text-gray-300">
-      Atualmente trabalho na <span class="text-green-400">Itceg Soluções em Tecnologia</span> e
-      estou cursando <span class="text-orange-400">Segurança e Defesa Cibernética</span> e
-      <span class="text-sky-400">Ciência de Dados e Inteligência Artificial</span>.
-    </p>
-  </section>
+  <section id="sobre" class="relative z-10 px-6 py-28 md:py-40 max-w-6xl mx-auto" data-aos="fade-up">
+  <!-- Wrapper principal: usa grid para layout responsivo -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    <!-- Coluna esquerda — Texto principal -->
+    <div class="text-left">
+      <!-- Título -->
+      <h2 class="font-orbitron text-4xl md:text-5xl text-indigo-200 mb-6 uppercase title-glow">
+        Sobre Mim
+      </h2>
+
+      <!-- Parágrafo principal (resumo) -->
+      <p class="font-rajdhani text-lg md:text-xl text-gray-200 leading-relaxed max-w-prose mb-6">
+        Sou um desenvolvedor <strong class="text-sky-400">Full-Stack</strong> com foco em <strong>PHP / Laravel</strong>,
+        integrações de <strong>APIs REST</strong> e automação de processos. Gosto de construir soluções do zero —
+        ferramentas que simplifiquem o dia a dia e entreguem resultados reais.
+      </p>
+
+      <!-- Projeto autoral / onde trabalha -->
+      <p class="font-rajdhani text-base text-gray-300 mb-6">
+        Atualmente atuo na <span class="text-sky-400 font-medium">Itceg Soluções em Tecnologia</span> e mantenho um projeto
+        autoral, o <a href="#" class="text-indigo-300 underline hover:text-indigo-400">AgendaIdeal</a> — um sistema de agendamentos
+        em PHP puro + Slim que já gera retorno financeiro e evolui constantemente.
+      </p>
+
+      <!-- Visão e objetivo -->
+      <p class="font-rajdhani text-base text-gray-300 mb-6">
+        Minha visão: criar aplicações <em>autônomas, confiáveis e com impacto</em>. Quero trabalhar com
+        <strong class="text-sky-400">inteligência artificial aplicada ao dia a dia</strong> e, a médio prazo,
+        fundar uma startup de soluções automatizadas.
+      </p>
+
+      <!-- CTA: ver projetos, baixar CV (substituir links) -->
+      <div class="mt-6 flex flex-wrap gap-4">
+        <!-- Ver projetos -->
+        <a href="#projetos"
+           class="btn-primary inline-flex items-center gap-3">
+          Ver Projetos
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+
+        <!-- Download CV — coloque link para o arquivo PDF no repo/assets -->
+        <a href="/assets/files/Curriculo_Leonardo_Justino.pdf" target="_blank" class="btn-alt">
+          Baixar CV
+        </a>
+
+        <!-- Link para AgendaIdeal (substitua '#') -->
+        <a href="#" class="text-sm text-gray-300 self-center underline hover:text-sky-300">Ver AgendaIdeal</a>
+      </div>
+    </div>
+
+    <!-- Coluna direita — Card com destaque + skills -->
+    <div class="relative">
+      <!-- Card principal -->
+      <div class="bg-panel panel-glow p-6 rounded-2xl border border-gray-700">
+        <!-- Pequena descrição com ícone -->
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center shadow-lg">
+            <!-- ícone (SVG) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12v8"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-sm text-gray-400">Desenvolvedor</div>
+            <div class="font-orbitron text-lg text-sky-300">Leonardo Justino</div>
+          </div>
+        </div>
+
+        <!-- Números rápidos / badges (substitua valores se quiser) -->
+        <div class="flex gap-4 items-center mb-6">
+          <div class="text-center">
+            <div class="text-2xl font-orbitron text-indigo-300">3+</div>
+            <div class="text-xs text-gray-400">Anos de experiência</div>
+          </div>
+
+          <div class="h-10 w-px bg-gray-700/60"></div>
+
+          <div class="text-center">
+            <div class="text-2xl font-orbitron text-sky-300">+15</div>
+            <div class="text-xs text-gray-400">Projetos (pessoais / freelance)</div>
+          </div>
+        </div>
+
+        <!-- Lista curta de skills (destaque) -->
+        <div class="mb-4">
+          <h4 class="font-orbitron text-sm text-indigo-200 uppercase mb-3 tracking-widest">Stack & Foco</h4>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">Laravel</span>
+            <span class="skill-badge">APIs REST</span>
+            <span class="skill-badge">Automação</span>
+            <span class="skill-badge">Web Scraping</span>
+            <span class="skill-badge">MySQL / SQLite</span>
+          </div>
+        </div>
+
+        <!-- Interesse / capacidades futuras (IA e dados) -->
+        <div class="mt-4">
+          <h4 class="font-orbitron text-sm text-indigo-200 uppercase mb-2 tracking-widest">Interesse</h4>
+          <p class="text-sm text-gray-300">
+            Pós-graduação em <strong class="text-sky-400">Ciência de Dados e IA</strong> — explorando aplicações práticas para
+            automatizar processos e construir produtos autônomos com impacto real.
+          </p>
+        </div>
+      </div>
+
+      <!-- Peça visual extra (opcional): pequena etiqueta flutuante -->
+      <div class="absolute -right-6 -top-6 hidden md:block">
+        <div class="bg-indigo-600/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-rajdhani backdrop-blur-sm border border-indigo-400/10">
+          Disponível para freelances
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- === PROJETOS === -->
     <section id="projetos" class="relative z-10 px-6 py-32 text-center" data-aos="fade-up">
