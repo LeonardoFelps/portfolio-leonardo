@@ -1,0 +1,237 @@
+/* === 🌌 Aurora Tech — Tema Base Atualizado ===
+   Visual escuro, tecnológico e fluido com brilhos sutis e contraste equilibrado.
+   ---------------------------------------------------------- */
+
+/* === Fundo Principal === */
+body {
+  background: radial-gradient(circle at 20% 30%, #0f172a 0%, #0b1120 40%, #020617 100%);
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Aurora Suave em Movimento === */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 40%, rgba(56,189,248,0.18) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(52,211,153,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(245,158,11,0.1) 0%, transparent 60%);
+  animation: auroraPulse 16s ease-in-out infinite alternate;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+/* Movimento sutil da aurora */
+@keyframes auroraPulse {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+/* === Tipografia === */
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+p, span, a, li {
+  font-family: 'Inter', sans-serif;
+}
+
+/* === Títulos com brilho suave === */
+.title-glow {
+  text-shadow:
+    0 0 12px rgba(56,189,248,0.4),
+    0 0 24px rgba(56,189,248,0.2);
+}
+
+/* Glow ao passar o mouse (efeito cibernético) */
+h1:hover, h2:hover {
+  text-shadow:
+    0 0 20px rgba(56,189,248,0.8),
+    0 0 40px rgba(52,211,153,0.6),
+    0 0 60px rgba(245,158,11,0.4);
+}
+
+/* === Texto com brilho discreto === */
+.text-glow {
+  text-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+/* === Botões — primário e alternativo === */
+.btn-primary,
+.btn-alt {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  isolation: isolate;
+}
+
+/* === Botão Azul (Principal) === */
+.btn-primary {
+  border: 1px solid rgba(56,189,248,0.5);
+  color: #38bdf8;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -150%;
+  background: linear-gradient(90deg, transparent, rgba(56,189,248,0.3), transparent);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  left: 150%;
+}
+
+.btn-primary:hover {
+  background-color: rgba(56,189,248,0.1);
+  box-shadow: 0 0 25px rgba(56,189,248,0.3);
+  color: #7dd3fc;
+}
+
+/* === Botão Verde (Alternativo) === */
+.btn-alt {
+  border: 1px solid rgba(52,211,153,0.5);
+  color: #34d399;
+}
+
+.btn-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -150%;
+  background: linear-gradient(90deg, transparent, rgba(52,211,153,0.3), transparent);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.btn-alt:hover::before {
+  left: 150%;
+}
+
+.btn-alt:hover {
+  background-color: rgba(52,211,153,0.15);
+  box-shadow: 0 0 25px rgba(52,211,153,0.5);
+  color: #a7f3d0;
+}
+
+/* === Skill Badges === */
+.skill-badge {
+  background: rgba(56,189,248,0.15);
+  border: 1px solid rgba(56,189,248,0.3);
+  color: #bae6fd;
+  font-family: 'Orbitron', sans-serif;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: rgba(56,189,248,0.25);
+  box-shadow: 0 0 12px rgba(56,189,248,0.3);
+  transform: translateY(-2px);
+}
+
+/* === Cards / Painéis === */
+.card-panel {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.card-panel:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.3),
+    0 0 30px rgba(52, 211, 153, 0.2);
+  border-color: rgba(56,189,248,0.4);
+}
+
+/* === AOS (Animações de entrada) === */
+[data-aos] {
+  transition: all 0.8s ease-out;
+}
+
+/* === Canvas Aurora === */
+#auroraCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: radial-gradient(circle at 20% 30%, #0f172a 0%, #0b1120 40%, #020617 100%);
+}
+
+/* === Fade suave de entrada === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+/* === Cabeçalho Dinâmico === */
+header.scrolled {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+}
+
+#backToTop {
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+#backToTop:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(56,189,248,0.4);
+}
+
+/* === Microanimações === */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Otimização === */
+* {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}

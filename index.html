@@ -3,21 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leonardo Justino | Portfólio</title>
 
-  <!-- Tailwind compilado -->
-  <link rel="stylesheet" href="assets/app.css" />
+  <!-- SEO e metadados -->
+  <meta name="description" content="Portfólio de Leonardo Justino — Desenvolvedor Full-Stack e Analista de Sistemas, especializado em soluções performáticas e seguras.">
+  <meta name="author" content="Leonardo Justino">
+  <meta property="og:title" content="Leonardo Justino | Desenvolvedor Full-Stack">
+  <meta property="og:description" content="Criando soluções performáticas, seguras e inteligentes.">
+  <meta property="og:image" content="assets/img/preview.png">
+  <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Leonardo Justino | Desenvolvedor Full-Stack</title>
+
+  <!-- TailwindCSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fontes personalizadas -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Biblioteca de animações (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="manifest" href="manifest.json">
+
 </head>
 
-<body class="bg-gray-950 text-white">
-  <!-- Hero Section -->
-  <section id="hero" class="...">
-    <!-- Seu conteúdo aqui -->
+<body class="aurora-bg text-white overflow-x-hidden">
+
+  <!-- === Canvas Aurora (fundo animado com partículas) === -->
+  <canvas id="auroraCanvas"></canvas>
+
+  <!-- === CABEÇALHO / MENU === -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO -->
+        <title>Leonardo Justino | Desenvolvedor Full-Stack</title>
+        <meta name="description" content="Portfólio de Leonardo Justino — Desenvolvedor Full-Stack e Analista de Sistemas, especializado em soluções performáticas, seguras e inteligentes.">
+        <meta name="keywords" content="Leonardo Justino, Desenvolvedor, Full-Stack, Portfólio, Programador, JavaScript, PHP, Laravel, Front-End, Back-End, Tecnologia, Itceg">
+        <meta name="author" content="Leonardo Justino">
+
+        <!-- Open Graph (Preview social) -->
+        <meta property="og:title" content="Leonardo Justino | Desenvolvedor Full-Stack">
+        <meta property="og:description" content="Criando soluções performáticas, seguras e inteligentes.">
+        <meta property="og:image" content="assets/img/preview.png">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://leonardo.github.io/">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="assets/img/preview.png">
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Fontes -->
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+        <!-- CSS Custom -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+
+  <!-- === HERO SECTION === -->
+  <section id="hero" class="relative z-10 min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-24 md:pt-0">
+    
+    <h1 data-aos="fade-up" class="text-4xl sm:text-5xl md:text-7xl font-bold text-glow mb-6 leading-tight">
+      Leonardo Justino
+    </h1>
+
+    <p data-aos="fade-up" data-aos-delay="200" class="text-gray-300 text-base sm:text-lg md:text-2xl max-w-2xl leading-relaxed">
+      Desenvolvedor Full-Stack e Analista de Sistemas<br>
+      Criando soluções performáticas, seguras e inteligentes.
+    </p>
+
+    <div data-aos="fade-up" data-aos-delay="400" class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
+      <a href="#projetos" class="btn-primary w-full sm:w-auto">Ver Projetos</a>
+      <a href="#contato" class="btn-primary btn-alt w-full sm:w-auto">Contato</a>
+    </div>
   </section>
 
-  <script src="assets/app.js"></script>
+  <!-- === SOBRE === -->
+  <section id="sobre" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center max-w-4xl mx-auto" data-aos="fade-up">
+    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-10 fade-in-up">Sobre Mim</h2>
+    <p class="font-rajdhani text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+      Sou um desenvolvedor <span class="text-sky-400">Full-Stack</span> com mais de 3 anos de experiência,
+      especializado em soluções web de alta performance, automação de processos e integração de APIs.
+      Tenho profundo interesse em segurança da informação e análise de dados.
+    </p>
+    <p class="mt-6 font-rajdhani text-base sm:text-lg md:text-xl text-gray-300">
+      Atualmente trabalho na <span class="text-green-400">Itceg Soluções em Tecnologia</span> e
+      estou cursando <span class="text-orange-400">Segurança e Defesa Cibernética</span> e
+      <span class="text-sky-400">Ciência de Dados e Inteligência Artificial</span>.
+    </p>
+  </section>
+
+  <!-- === PROJETOS === -->
+  <section id="projetos" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center" data-aos="fade-up">
+    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-12 fade-in-up">Projetos</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
+      <!-- Card -->
+      <div class="bg-gray-800/40 p-5 md:p-6 rounded-2xl border border-gray-700 hover:border-sky-400 transition-all duration-300 w-full">
+        <h3 class="font-orbitron text-xl md:text-2xl text-sky-400 mb-3">API Automator</h3>
+        <p class="font-rajdhani text-gray-300 text-sm md:text-base">
+          Sistema de integração REST que automatiza comunicações entre múltiplas APIs, com logs e controle centralizado.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 p-5 md:p-6 rounded-2xl border border-gray-700 hover:border-green-400 transition-all duration-300 w-full">
+        <h3 class="font-orbitron text-xl md:text-2xl text-green-400 mb-3">DataVision</h3>
+        <p class="font-rajdhani text-gray-300 text-sm md:text-base">
+          Dashboard analítico em tempo real com integração MySQL e visualização dinâmica de métricas e insights.
+        </p>
+      </div>
+
+      <div class="bg-gray-800/40 p-5 md:p-6 rounded-2xl border border-gray-700 hover:border-orange-400 transition-all duration-300 w-full">
+        <h3 class="font-orbitron text-xl md:text-2xl text-orange-400 mb-3">SecureAuth</h3>
+        <p class="font-rajdhani text-gray-300 text-sm md:text-base">
+          Sistema de autenticação segura e monitoramento de acessos, com boas práticas de segurança cibernética.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SKILLS === -->
+  <section id="skills" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center" data-aos="fade-up">
+    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-10 fade-in-up">Competências</h2>
+
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-5 max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+      <span class="skill-badge">PHP / Laravel</span>
+      <span class="skill-badge">JavaScript / APIs REST</span>
+      <span class="skill-badge">SQL / MySQL</span>
+      <span class="skill-badge">Python / Data Analysis</span>
+      <span class="skill-badge">Cybersecurity</span>
+    </div>
+  </section>
+
+  <!-- === CONTATO === -->
+  <section id="contato" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center max-w-3xl mx-auto" data-aos="fade-up">
+    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-10 fade-in-up">Contato</h2>
+
+    <p class="font-rajdhani text-base sm:text-lg md:text-xl text-gray-300 mb-8">
+      Aberto a novas oportunidades, colaborações e desafios técnicos.<br>
+      Vamos conversar sobre tecnologia e inovação?
+    </p>
+
+    <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6">
+      <a href="mailto:leofevieira98@gmail.com" class="btn-primary w-full sm:w-auto">E-mail</a>
+      <a href="https://www.linkedin.com/in/leonardo-felipe-413031193/" target="_blank" class="btn-primary btn-alt w-full sm:w-auto">LinkedIn</a>
+      <a href="https://github.com/LeonardoFelps" target="_blank" class="btn-primary w-full sm:w-auto">GitHub</a>
+    </div>
+  </section>
+
+
+    <button id="backToTop" class="hidden fixed bottom-6 right-6 bg-sky-500/20 border border-sky-400/40 text-sky-300 p-3 rounded-full backdrop-blur-sm hover:bg-sky-500/30 transition-all">
+        ↑
+    </button>
+
+
+    <!-- === FOOTER === -->
+    <footer class="relative z-10 py-6 text-center text-gray-500 text-xs sm:text-sm">
+        © <span id="year"></span> Leonardo Justino. Desenvolvido com <span class="text-sky-400">Aurora Tech</span>.
+    </footer>
+
+    <!-- === SCRIPTS === -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+  
+
 </body>
 </html>
