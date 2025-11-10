@@ -176,3 +176,151 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// === Glow dinâmico nos cards ===
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.boxShadow = `0 0 20px rgba(56,189,248,0.3), ${x / 30}px ${y / 30}px 40px rgba(56,189,248,0.2)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.boxShadow = '';
+  });
+});
+
+// === MODAL DOS PROJETOS ===
+const projects = {
+  "api-automator": {
+    title: "API Automator",
+    desc: "Plataforma que automatiza integrações RESTful, com painéis de logs e orquestração de fluxos de dados entre sistemas.",
+    stack: "Tecnologias: PHP, Laravel, MySQL, JavaScript",
+    img: "assets/img/api-automator.png",
+    github: "https://github.com/LeonardoFelps/api-automator",
+    demo: "#"
+  },
+  "datavision": {
+    title: "DataVision",
+    desc: "Dashboard moderno e performático com visualização de métricas em tempo real, integração MySQL e gráficos Chart.js.",
+    stack: "Tecnologias: Python, Flask, Chart.js, MySQL",
+    img: "assets/img/datavision.png",
+    github: "https://github.com/LeonardoFelps/datavision",
+    demo: "#"
+  },
+  "secureauth": {
+    title: "SecureAuth",
+    desc: "Sistema de autenticação JWT com verificação de sessão e monitoramento de acessos, seguindo práticas OWASP.",
+    stack: "Tecnologias: Node.js, Express, JWT, MongoDB",
+    img: "assets/img/secureauth.png",
+    github: "https://github.com/LeonardoFelps/secureauth",
+    demo: "#"
+  }
+};
+
+const modal = document.getElementById("project-modal");
+const closeModal = document.getElementById("close-modal");
+
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const id = card.dataset.project;
+    const project = projects[id];
+    if (!project) return;
+
+    document.getElementById("modal-title").textContent = project.title;
+    document.getElementById("modal-desc").textContent = project.desc;
+    document.getElementById("modal-stack").textContent = project.stack;
+    document.getElementById("modal-img").src = project.img;
+    document.getElementById("modal-github").href = project.github;
+    document.getElementById("modal-demo").href = project.demo;
+
+    modal.classList.remove("hidden");
+  });
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+// Fecha modal ao clicar fora do conteúdo
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.add("hidden");
+});
+
+// === FILTROS DE CATEGORIA ===
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.getAttribute("data-filter");
+
+    // Atualiza estado ativo
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // Mostra ou oculta projetos
+    projectCards.forEach(card => {
+      if (filter === "all" || card.dataset.category === filter) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+  });
+});
+
+// === EFEITO TILT 3D LEVE ===
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / 20) * -1;
+    const rotateY = (x - centerX) / 20;
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+  });
+});
+
+// === AURORA LOADER ===
+window.addEventListener("load", () => {
+  const loader = document.getElementById("aurora-loader");
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    setTimeout(() => loader.remove(), 1000);
+  }, 800);
+});
+
+// === TRANSIÇÃO SUAVE ENTRE SEÇÕES ===
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+    }
+  });
+});
+
+// === TOGGLE DE TEMA (Header Aurora) ===
+const themeToggle = document.getElementById("theme-toggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    document.body.style.transition = "background 1.2s ease, color 0.8s ease";
+
+    // Alterna ícone suavemente
+    if (document.body.classList.contains("light-mode")) {
+      themeToggle.textContent = "🌙";
+    } else {
+      themeToggle.textContent = "☀️";
+    }
+  });
+}
+

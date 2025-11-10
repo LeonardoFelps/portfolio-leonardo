@@ -28,46 +28,87 @@
 
   <link rel="manifest" href="manifest.json">
 
+  <!-- === SEO Avançado === -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Leonardo Justino, Desenvolvedor Full Stack, Portfólio, APIs, JavaScript, PHP, Segurança da Informação">
+    <link rel="canonical" href="https://leonardojustino.dev/">
+
+    <!-- === JSON-LD Schema === -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Leonardo Justino",
+            "url": "https://leonardojustino.dev/",
+            "jobTitle": "Desenvolvedor Full-Stack",
+            "sameAs": [
+                "https://github.com/LeonardoFelps",
+                "https://www.linkedin.com/in/leonardo-felipe-413031193/"
+            ]
+        }
+    </script>
+
+
 </head>
 
 <body class="aurora-bg text-white overflow-x-hidden">
 
+    <!-- === AURORA LOADER === -->
+    <div id="aurora-loader" class="fixed inset-0 flex items-center justify-center bg-gray-950 z-[9999]">
+    <div class="loader-circle relative">
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+        <div class="ring ring3"></div>
+        <span class="font-orbitron text-sky-400 text-lg mt-6 absolute -bottom-10 w-full text-center">
+        Aurora Tech • Loading
+        </span>
+    </div>
+    </div>
+
+
   <!-- === Canvas Aurora (fundo animado com partículas) === -->
   <canvas id="auroraCanvas"></canvas>
 
-  <!-- === CABEÇALHO / MENU === -->
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- === CABEÇALHO / MENU === -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-gray-900/30 backdrop-blur-sm border-b border-gray-700/30">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6 text-sm md:text-base">
 
-        <!-- SEO -->
-        <title>Leonardo Justino | Desenvolvedor Full-Stack</title>
-        <meta name="description" content="Portfólio de Leonardo Justino — Desenvolvedor Full-Stack e Analista de Sistemas, especializado em soluções performáticas, seguras e inteligentes.">
-        <meta name="keywords" content="Leonardo Justino, Desenvolvedor, Full-Stack, Portfólio, Programador, JavaScript, PHP, Laravel, Front-End, Back-End, Tecnologia, Itceg">
-        <meta name="author" content="Leonardo Justino">
+    <!-- LOGO -->
+    <span class="font-orbitron text-sky-400 text-lg tracking-wider">LJ</span>
 
-        <!-- Open Graph (Preview social) -->
-        <meta property="og:title" content="Leonardo Justino | Desenvolvedor Full-Stack">
-        <meta property="og:description" content="Criando soluções performáticas, seguras e inteligentes.">
-        <meta property="og:image" content="assets/img/preview.png">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://leonardo.github.io/">
+    <!-- MENU DESKTOP -->
+    <ul id="menu" class="hidden md:flex gap-6 text-gray-300 font-rajdhani transition-all duration-300">
+      <li><a href="#hero" class="hover:text-sky-400 transition">Início</a></li>
+      <li><a href="#sobre" class="hover:text-sky-400 transition">Sobre</a></li>
+      <li><a href="#projetos" class="hover:text-sky-400 transition">Projetos</a></li>
+      <li><a href="#skills" class="hover:text-sky-400 transition">Skills</a></li>
+      <li><a href="#contato" class="hover:text-sky-400 transition">Contato</a></li>
+    </ul>
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="assets/img/preview.png">
+    <!-- TOGGLE DE TEMA -->
+    <button id="theme-toggle" class="ml-6 text-sky-400 text-xl p-2 rounded-full border border-sky-400/40 hover:bg-gray-800/40 transition-all">
+      ☀️
+    </button>
 
-        <!-- Tailwind -->
-        <script src="https://cdn.tailwindcss.com"></script>
+    <!-- BOTÃO MOBILE -->
+    <button id="menu-toggle" class="block md:hidden text-sky-400 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
 
-        <!-- Fontes -->
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- MENU MOBILE DROPDOWN -->
+  <div id="mobile-menu" class="hidden flex-col md:hidden bg-gray-900/80 backdrop-blur-sm border-t border-gray-700/30 text-center py-4 space-y-3">
+    <a href="#hero" class="block hover:text-sky-400">Início</a>
+    <a href="#sobre" class="block hover:text-sky-400">Sobre</a>
+    <a href="#projetos" class="block hover:text-sky-400">Projetos</a>
+    <a href="#skills" class="block hover:text-sky-400">Skills</a>
+    <a href="#contato" class="block hover:text-sky-400">Contato</a>
+  </div>
+</header>
 
-        <!-- AOS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-        <!-- CSS Custom -->
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
 
 
   <!-- === HERO SECTION === -->
@@ -104,33 +145,70 @@
   </section>
 
   <!-- === PROJETOS === -->
-  <section id="projetos" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center" data-aos="fade-up">
-    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-12 fade-in-up">Projetos</h2>
+    <section id="projetos" class="relative z-10 px-6 py-32 text-center" data-aos="fade-up">
+        <h2 class="font-orbitron text-5xl text-indigo-300 mb-10 fade-in-up">Projetos em Destaque</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
-      <!-- Card -->
-      <div class="bg-gray-800/40 p-5 md:p-6 rounded-2xl border border-gray-700 hover:border-sky-400 transition-all duration-300 w-full">
-        <h3 class="font-orbitron text-xl md:text-2xl text-sky-400 mb-3">API Automator</h3>
-        <p class="font-rajdhani text-gray-300 text-sm md:text-base">
-          Sistema de integração REST que automatiza comunicações entre múltiplas APIs, com logs e controle centralizado.
-        </p>
-      </div>
+        <!-- === FILTROS DE CATEGORIA === -->
+        <div class="flex justify-center flex-wrap gap-4 mb-12">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="data">Data</button>
+            <button class="filter-btn" data-filter="security">Security</button>
+        </div>
 
-      <div class="bg-gray-800/40 p-5 md:p-6 rounded-2xl border border-gray-700 hover:border-green-400 transition-all duration-300 w-full">
-        <h3 class="font-orbitron text-xl md:text-2xl text-green-400 mb-3">DataVision</h3>
-        <p class="font-rajdhani text-gray-300 text-sm md:text-base">
-          Dashboard analítico em tempo real com integração MySQL e visualização dinâmica de métricas e insights.
-        </p>
-      </div>
+        <!-- === GRID DE PROJETOS === -->
+        <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-      <div class="bg-gray-800/40 p-5 md:p-6 rounded-2xl border border-gray-700 hover:border-orange-400 transition-all duration-300 w-full">
-        <h3 class="font-orbitron text-xl md:text-2xl text-orange-400 mb-3">SecureAuth</h3>
-        <p class="font-rajdhani text-gray-300 text-sm md:text-base">
-          Sistema de autenticação segura e monitoramento de acessos, com boas práticas de segurança cibernética.
-        </p>
-      </div>
-    </div>
-  </section>
+            <!-- Projeto 1 -->
+            <div class="project-card" data-category="web" data-project="api-automator">
+            <img src="assets/img/api-automator.png" alt="API Automator" class="rounded-xl w-full mb-5 border border-gray-700/50">
+            <h3 class="font-orbitron text-2xl text-sky-400 mb-3">API Automator</h3>
+            <p class="font-rajdhani text-gray-300 text-base">
+                Sistema web para automação e integração de APIs REST com logs e controle centralizado.
+            </p>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project-card" data-category="data" data-project="datavision">
+            <img src="assets/img/datavision.png" alt="DataVision" class="rounded-xl w-full mb-5 border border-gray-700/50">
+            <h3 class="font-orbitron text-2xl text-green-400 mb-3">DataVision</h3>
+            <p class="font-rajdhani text-gray-300 text-base">
+                Dashboard de análise de dados em tempo real, com integração SQL e gráficos interativos.
+            </p>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="project-card" data-category="security" data-project="secureauth">
+            <img src="assets/img/secureauth.png" alt="SecureAuth" class="rounded-xl w-full mb-5 border border-gray-700/50">
+            <h3 class="font-orbitron text-2xl text-orange-400 mb-3">SecureAuth</h3>
+            <p class="font-rajdhani text-gray-300 text-base">
+                Sistema de autenticação segura e controle de acessos com práticas OWASP.
+            </p>
+            </div>
+
+        </div>
+
+        <!-- === Modal dos projetos === -->
+        <div id="project-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+            <div class="bg-gray-900/90 rounded-2xl border border-gray-700/40 p-8 max-w-2xl w-full relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-sky-400 hover:text-sky-200 text-2xl">&times;</button>
+
+            <img id="modal-img" src="" alt="" class="w-full rounded-xl border border-gray-700 mb-6">
+            <h3 id="modal-title" class="font-orbitron text-3xl text-indigo-300 mb-4"></h3>
+            <p id="modal-desc" class="font-rajdhani text-gray-300 text-lg leading-relaxed mb-6"></p>
+
+            <p id="modal-stack" class="font-rajdhani text-sky-400 text-base mb-8"></p>
+
+            <div id="modal-links" class="flex justify-center gap-6">
+                <a href="#" id="modal-github" target="_blank" class="btn-primary">GitHub</a>
+                <a href="#" id="modal-demo" target="_blank" class="btn-alt">Demo</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
 
   <!-- === SKILLS === -->
   <section id="skills" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center" data-aos="fade-up">
