@@ -4,30 +4,10 @@
   const siteMenu = document.getElementById("site-menu");
   const year = document.getElementById("year");
   const revealItems = document.querySelectorAll(".reveal");
-  const visitCounter = document.getElementById("visit-counter");
 
   const syncHeaderState = () => {
     if (!header) return;
     header.classList.toggle("is-scrolled", window.scrollY > 16);
-  };
-
-  const updateVisitCounter = async () => {
-    if (!visitCounter) return;
-
-    try {
-      const response = await fetch("https://counterapi.com/api/leonardo-justino-portfolio/view/homepage");
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-      const data = await response.json();
-      const count = typeof data.Count === "number" ? data.Count : typeof data.count === "number" ? data.count : null;
-
-      if (count === null) throw new Error("Invalid counter payload");
-
-      const formatted = new Intl.NumberFormat("pt-BR").format(count);
-      visitCounter.textContent = `${formatted} visitas registradas nesta página`;
-    } catch {
-      visitCounter.textContent = "Contador de visitas indisponível no momento";
-    }
   };
 
   syncHeaderState();
@@ -50,8 +30,6 @@
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
-
-  updateVisitCounter();
 
   if ("IntersectionObserver" in window && revealItems.length > 0) {
     const observer = new IntersectionObserver((entries) => {
