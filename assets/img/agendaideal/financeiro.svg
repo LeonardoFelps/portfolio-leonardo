@@ -1,0 +1,90 @@
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2A"/>
+      <stop offset="1" stop-color="#091321"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1600" height="56" rx="28" fill="#1A2331"/>
+  <circle cx="1544" cy="28" r="18" fill="#6FA8FF"/>
+  <text x="32" y="38" fill="#8FA3C2" font-size="18" font-family="Arial, sans-serif">Fluxo de Caixa</text>
+
+  <text x="32" y="104" fill="#38D7F2" font-size="24" font-weight="700" font-family="Arial, sans-serif">Fluxo de Caixa</text>
+  <text x="32" y="132" fill="#83A4D8" font-size="14" font-family="Arial, sans-serif">Acompanhe entradas e saídas por dia</text>
+
+  <g>
+    <text x="32" y="176" fill="#83A4D8" font-size="13" font-family="Arial, sans-serif">Período</text>
+    <text x="410" y="176" fill="#83A4D8" font-size="13" font-family="Arial, sans-serif">Data inicial</text>
+    <text x="798" y="176" fill="#83A4D8" font-size="13" font-family="Arial, sans-serif">Data final</text>
+    <text x="1186" y="176" fill="#83A4D8" font-size="13" font-family="Arial, sans-serif">Tipo</text>
+    <rect x="20" y="186" width="372" height="40" rx="12" fill="#1A2331" stroke="#344258"/>
+    <rect x="408" y="186" width="372" height="40" rx="12" fill="#1A2331" stroke="#344258"/>
+    <rect x="796" y="186" width="372" height="40" rx="12" fill="#1A2331" stroke="#344258"/>
+    <rect x="1184" y="186" width="372" height="40" rx="12" fill="#1A2331" stroke="#344258"/>
+    <text x="40" y="212" fill="#F3F7FD" font-size="16" font-weight="700" font-family="Arial, sans-serif">Mês</text>
+    <text x="428" y="212" fill="#F3F7FD" font-size="16" font-weight="700" font-family="Arial, sans-serif">01/03/2026</text>
+    <text x="816" y="212" fill="#F3F7FD" font-size="16" font-weight="700" font-family="Arial, sans-serif">31/03/2026</text>
+    <text x="1204" y="212" fill="#F3F7FD" font-size="16" font-weight="700" font-family="Arial, sans-serif">Todos os tipos</text>
+  </g>
+
+  <g>
+    <rect x="20" y="250" width="372" height="78" rx="18" fill="#181F2B" stroke="#364258"/>
+    <rect x="408" y="250" width="372" height="78" rx="18" fill="#181F2B" stroke="#364258"/>
+    <rect x="796" y="250" width="372" height="78" rx="18" fill="#181F2B" stroke="#364258"/>
+    <rect x="1184" y="250" width="372" height="78" rx="18" fill="#181F2B" stroke="#364258"/>
+    <text x="36" y="280" fill="#7D90AE" font-size="14" font-family="Arial, sans-serif">Entradas</text>
+    <text x="424" y="280" fill="#7D90AE" font-size="14" font-family="Arial, sans-serif">Saídas</text>
+    <text x="812" y="280" fill="#7D90AE" font-size="14" font-family="Arial, sans-serif">Saldo</text>
+    <text x="1200" y="280" fill="#7D90AE" font-size="14" font-family="Arial, sans-serif">Lançamentos</text>
+    <text x="36" y="306" fill="#41E6A8" font-size="26" font-weight="700" font-family="Arial, sans-serif">R$ 15.412,00</text>
+    <text x="424" y="306" fill="#FF7E85" font-size="26" font-weight="700" font-family="Arial, sans-serif">R$ 9.613,60</text>
+    <text x="812" y="306" fill="#54F0BE" font-size="26" font-weight="700" font-family="Arial, sans-serif">R$ 5.798,40</text>
+    <text x="1200" y="306" fill="#F3F7FD" font-size="26" font-weight="700" font-family="Arial, sans-serif">389</text>
+  </g>
+
+  <rect x="20" y="348" width="1536" height="520" rx="22" fill="#181F2B" stroke="#364258"/>
+  <text x="40" y="392" fill="#F4F8FF" font-size="28" font-weight="700" font-family="Arial, sans-serif">23/03/2026</text>
+  <text x="40" y="420" fill="#7D90AE" font-size="16" font-family="Arial, sans-serif">Saldo do dia: R$ -135,60</text>
+  <line x1="20" y1="440" x2="1556" y2="440" stroke="#293244"/>
+
+  <g font-family="Arial, sans-serif">
+    <circle cx="44" cy="492" r="4" fill="#FF8588"/>
+    <text x="60" y="490" fill="#F4F8FF" font-size="16" font-weight="700">Repasse previsto: Théo José</text>
+    <text x="60" y="514" fill="#7E92B0" font-size="14">Repasse profissionais</text>
+    <rect x="190" y="497" width="72" height="24" rx="12" fill="#54491D"/>
+    <text x="226" y="514" fill="#F6D135" font-size="12" font-weight="700" text-anchor="middle">Pendente</text>
+    <text x="1468" y="504" fill="#FF8A89" font-size="16" font-weight="700">- R$ 30,00</text>
+
+    <line x1="40" y1="540" x2="1536" y2="540" stroke="#293244"/>
+    <circle cx="44" cy="574" r="4" fill="#FF8588"/>
+    <text x="60" y="572" fill="#F4F8FF" font-size="16" font-weight="700">Repasse previsto: Leonardo Justino</text>
+    <text x="60" y="596" fill="#7E92B0" font-size="14">Repasse profissionais</text>
+    <rect x="190" y="579" width="72" height="24" rx="12" fill="#54491D"/>
+    <text x="226" y="596" fill="#F6D135" font-size="12" font-weight="700" text-anchor="middle">Pendente</text>
+    <text x="1472" y="586" fill="#FF8A89" font-size="16" font-weight="700">- R$ 18,00</text>
+
+    <line x1="40" y1="622" x2="1536" y2="622" stroke="#293244"/>
+    <circle cx="44" cy="656" r="4" fill="#FF8588"/>
+    <text x="60" y="654" fill="#F4F8FF" font-size="16" font-weight="700">Repasse previsto: José Carlos</text>
+    <text x="60" y="678" fill="#7E92B0" font-size="14">Repasse profissionais</text>
+    <rect x="190" y="661" width="72" height="24" rx="12" fill="#54491D"/>
+    <text x="226" y="678" fill="#F6D135" font-size="12" font-weight="700" text-anchor="middle">Pendente</text>
+    <text x="1472" y="668" fill="#FF8A89" font-size="16" font-weight="700">- R$ 26,00</text>
+
+    <line x1="40" y1="704" x2="1536" y2="704" stroke="#293244"/>
+    <circle cx="44" cy="738" r="4" fill="#FF8588"/>
+    <text x="60" y="736" fill="#F4F8FF" font-size="16" font-weight="700">Repasse previsto: João Lucas</text>
+    <text x="60" y="760" fill="#7E92B0" font-size="14">Repasse profissionais</text>
+    <rect x="190" y="743" width="72" height="24" rx="12" fill="#54491D"/>
+    <text x="226" y="760" fill="#F6D135" font-size="12" font-weight="700" text-anchor="middle">Pendente</text>
+    <text x="1480" y="750" fill="#FF8A89" font-size="16" font-weight="700">- R$ 8,80</text>
+  </g>
+
+  <rect x="40" y="790" width="736" height="60" rx="16" fill="#2A313D" stroke="#49556A"/>
+  <rect x="800" y="790" width="736" height="60" rx="16" fill="#2A313D" stroke="#49556A"/>
+  <text x="56" y="814" fill="#7D90AE" font-size="14" font-family="Arial, sans-serif">Entradas</text>
+  <text x="56" y="838" fill="#41E6A8" font-size="18" font-weight="700" font-family="Arial, sans-serif">R$ 0,00</text>
+  <text x="816" y="814" fill="#7D90AE" font-size="14" font-family="Arial, sans-serif">Saídas</text>
+  <text x="816" y="838" fill="#FF7E85" font-size="18" font-weight="700" font-family="Arial, sans-serif">R$ 135,60</text>
+</svg>

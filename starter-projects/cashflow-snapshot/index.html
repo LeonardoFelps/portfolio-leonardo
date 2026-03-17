@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashflow Snapshot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">PROJETO PÚBLICO</p>
+      <h1>Cashflow Snapshot</h1>
+      <p class="lead">Resumo financeiro mensal com indicadores, lançamentos, categorias e entrada manual de movimentações.</p>
+    </header>
+
+    <section class="stats">
+      <article><span>Entradas</span><strong id="income">R$ 0,00</strong></article>
+      <article><span>Saídas</span><strong id="outcome">R$ 0,00</strong></article>
+      <article><span>Saldo</span><strong id="balance">R$ 0,00</strong></article>
+      <article><span>Margem</span><strong id="margin">0%</strong></article>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel side-panel">
+        <div class="panel-head">
+          <h2>Novo lançamento</h2>
+          <span>Persistência local</span>
+        </div>
+
+        <form id="entry-form" class="entry-form">
+          <label>
+            <span>Descrição</span>
+            <input name="label" type="text" placeholder="Ex: Assinatura Pro" required>
+          </label>
+          <label>
+            <span>Tipo</span>
+            <select name="type">
+              <option value="income">Entrada</option>
+              <option value="expense">Saída</option>
+            </select>
+          </label>
+          <label>
+            <span>Valor</span>
+            <input name="value" type="number" min="1" step="0.01" required>
+          </label>
+          <label>
+            <span>Categoria</span>
+            <input name="category" type="text" placeholder="Ex: SaaS" required>
+          </label>
+          <label>
+            <span>Data</span>
+            <input name="date" type="date" required>
+          </label>
+          <button class="primary-btn" type="submit">Adicionar lançamento</button>
+        </form>
+      </aside>
+
+      <section class="content-area">
+        <section class="layout">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Lançamentos</h2>
+              <select id="type-filter">
+                <option value="all">Todos</option>
+                <option value="income">Entradas</option>
+                <option value="expense">Saídas</option>
+              </select>
+            </div>
+            <div id="entry-list" class="entry-list"></div>
+          </section>
+
+          <aside class="panel">
+            <h2>Categorias</h2>
+            <div id="category-list" class="category-list"></div>
+          </aside>
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

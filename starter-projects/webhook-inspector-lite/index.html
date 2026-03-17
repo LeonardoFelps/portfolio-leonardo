@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webhook Inspector Lite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Projeto publico</p>
+        <h1>Webhook Inspector Lite</h1>
+        <p class="lead">Painel leve para acompanhar eventos recebidos, status de entrega, payloads recentes e novas entradas simuladas.</p>
+      </div>
+      <div class="status-chip">Online</div>
+    </header>
+
+    <section class="stats">
+      <article><strong id="total-events">0</strong><span>Eventos hoje</span></article>
+      <article><strong id="success-rate">0%</strong><span>Taxa de sucesso</span></article>
+      <article><strong id="avg-time">0 ms</strong><span>Tempo medio</span></article>
+      <article><strong id="active-source">0</strong><span>Fontes ativas</span></article>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel side-panel">
+        <div class="panel-head">
+          <h2>Novo evento</h2>
+          <span>Persistencia local</span>
+        </div>
+
+        <form id="event-form" class="event-form">
+          <label>
+            <span>Nome do evento</span>
+            <input name="name" type="text" placeholder="Ex: invoice.paid" required>
+          </label>
+          <label>
+            <span>Origem</span>
+            <input name="source" type="text" placeholder="Ex: agendaideal/billing" required>
+          </label>
+          <label>
+            <span>Status</span>
+            <select name="status">
+              <option value="success">Success</option>
+              <option value="warning">Warning</option>
+              <option value="error">Error</option>
+            </select>
+          </label>
+          <label>
+            <span>Tempo (ms)</span>
+            <input name="duration" type="number" min="1" value="120" required>
+          </label>
+          <label>
+            <span>Payload JSON</span>
+            <textarea name="payload" rows="6" placeholder='{"tenant":"Jupiter Tech"}' required></textarea>
+          </label>
+          <button class="primary-btn" type="submit">Adicionar evento</button>
+        </form>
+      </aside>
+
+      <section class="content-area">
+        <section class="panel controls">
+          <input id="search" type="search" placeholder="Buscar por evento ou origem">
+          <select id="status-filter">
+            <option value="all">Todos os status</option>
+            <option value="success">Success</option>
+            <option value="warning">Warning</option>
+            <option value="error">Error</option>
+          </select>
+        </section>
+
+        <section class="layout">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Eventos recentes</h2>
+              <span id="results-count">0 resultados</span>
+            </div>
+            <div id="event-list" class="event-list"></div>
+          </section>
+
+          <aside class="panel detail-panel">
+            <div class="panel-head">
+              <h2>Payload</h2>
+              <span>JSON</span>
+            </div>
+            <pre id="payload-view">{}</pre>
+          </aside>
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

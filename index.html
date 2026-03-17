@@ -1,367 +1,416 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO e metadados -->
-  <meta name="description" content="Portfólio de Leonardo Justino — Desenvolvedor Full-Stack e Analista de Sistemas, especializado em soluções performáticas e seguras.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leonardo Justino é desenvolvedor full stack com foco em PHP, Laravel, APIs REST, automação e sistemas web em produção. Veja projetos reais, AgendaIdeal e portfólio profissional.">
   <meta name="author" content="Leonardo Justino">
-  <meta property="og:title" content="Leonardo Justino | Desenvolvedor Full-Stack">
-  <meta property="og:description" content="Criando soluções performáticas, seguras e inteligentes.">
-  <meta property="og:image" content="assets/img/preview.png">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Leonardo Justino, desenvolvedor full stack, PHP, Laravel, APIs REST, automação, sistemas web, portfólio">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Leonardo Justino | Portfólio">
+  <meta property="og:title" content="Leonardo Justino | Desenvolvedor Full Stack PHP, Laravel e APIs REST">
+  <meta property="og:description" content="Portfólio com projetos reais, foco em PHP, Laravel, automação, APIs REST e sistemas web construídos para uso real.">
   <meta property="og:type" content="website">
-
-  <title>Leonardo Justino | Desenvolvedor Full-Stack</title>
-
-  <!-- TailwindCSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fontes personalizadas -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Biblioteca de animações (AOS) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- CSS personalizado -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
+  <meta property="og:url" content="https://leonardojustino.dev/">
+  <meta property="og:image" content="https://leonardojustino.dev/assets/img/agendaideal/dashboard.svg">
+  <meta property="og:image:alt" content="Preview do dashboard administrativo do AgendaIdeal no portfólio de Leonardo Justino">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Leonardo Justino | Desenvolvedor Full Stack PHP, Laravel e APIs REST">
+  <meta name="twitter:description" content="Projetos reais, AgendaIdeal e experiência com sistemas web, automação e interfaces de operação.">
+  <meta name="twitter:image" content="https://leonardojustino.dev/assets/img/agendaideal/dashboard.svg">
+  <meta name="twitter:image:alt" content="Preview do dashboard administrativo do AgendaIdeal no portfólio de Leonardo Justino">
+  <link rel="canonical" href="https://leonardojustino.dev/">
   <link rel="manifest" href="manifest.json">
-
-  <!-- === SEO Avançado === -->
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="Leonardo Justino, Desenvolvedor Full Stack, Portfólio, APIs, JavaScript, PHP, Segurança da Informação">
-    <link rel="canonical" href="https://leonardojustino.dev/">
-
-    <!-- === JSON-LD Schema === -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Leonardo Justino",
-            "url": "https://leonardojustino.dev/",
-            "jobTitle": "Desenvolvedor Full-Stack",
-            "sameAs": [
-                "https://github.com/LeonardoFelps",
-                "https://www.linkedin.com/in/leonardo-felipe-413031193/"
-            ]
-        }
-    </script>
-
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Leonardo Justino",
+      "url": "https://leonardojustino.dev/",
+      "image": "https://leonardojustino.dev/assets/img/agendaideal/dashboard.svg",
+      "description": "Desenvolvedor full stack com foco em PHP, Laravel, APIs REST, automação e sistemas web em produção.",
+      "email": "mailto:leofevieira98@gmail.com",
+      "jobTitle": "Desenvolvedor Full Stack",
+      "sameAs": [
+        "https://github.com/LeonardoFelps",
+        "https://www.linkedin.com/in/leonardojustino",
+        "https://www.workana.com/freelancer/46321a66b0c4beeb9580aecaa3323ba8"
+      ],
+      "knowsAbout": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "APIs REST",
+        "Automação",
+        "MySQL",
+        "PostgreSQL",
+        "Sistemas web",
+        "UX operacional",
+        "Arquitetura de software"
+      ]
+    }
+  </script>
+  <title>Leonardo Justino | Desenvolvedor Full Stack PHP, Laravel e APIs REST</title>
 </head>
-
-<body class="aurora-bg text-white overflow-x-hidden">
-
-    <!-- === AURORA LOADER === -->
-    <div id="aurora-loader" class="fixed inset-0 flex items-center justify-center bg-gray-950 z-[9999]">
-    <div class="loader-circle relative">
-        <div class="ring ring1"></div>
-        <div class="ring ring2"></div>
-        <div class="ring ring3"></div>
-        <span class="font-orbitron text-sky-400 text-lg mt-6 absolute -bottom-10 w-full text-center">
-        Aurora Tech • Loading
-        </span>
-    </div>
-    </div>
-
-
-  <!-- === Canvas Aurora (fundo animado com partículas) === -->
-  <canvas id="auroraCanvas"></canvas>
-
-    <!-- === CABEÇALHO / MENU === -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-gray-900/30 backdrop-blur-sm border-b border-gray-700/30">
-  <nav class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6 text-sm md:text-base">
-
-    <!-- LOGO -->
-    <span class="font-orbitron text-sky-400 text-lg tracking-wider">LJ</span>
-
-    <!-- MENU DESKTOP -->
-    <ul id="menu" class="hidden md:flex gap-6 text-gray-300 font-rajdhani transition-all duration-300">
-      <li><a href="#hero" class="hover:text-sky-400 transition">Início</a></li>
-      <li><a href="#sobre" class="hover:text-sky-400 transition">Sobre</a></li>
-      <li><a href="#projetos" class="hover:text-sky-400 transition">Projetos</a></li>
-      <li><a href="#skills" class="hover:text-sky-400 transition">Skills</a></li>
-      <li><a href="#contato" class="hover:text-sky-400 transition">Contato</a></li>
-    </ul>
-
-    <!-- TOGGLE DE TEMA -->
-    <button id="theme-toggle" class="ml-6 text-sky-400 text-xl p-2 rounded-full border border-sky-400/40 hover:bg-gray-800/40 transition-all">
-      ☀️
-    </button>
-
-    <!-- BOTÃO MOBILE -->
-    <button id="menu-toggle" class="block md:hidden text-sky-400 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </nav>
-
-  <!-- MENU MOBILE DROPDOWN -->
-  <div id="mobile-menu" class="hidden flex-col md:hidden bg-gray-900/80 backdrop-blur-sm border-t border-gray-700/30 text-center py-4 space-y-3">
-    <a href="#hero" class="block hover:text-sky-400">Início</a>
-    <a href="#sobre" class="block hover:text-sky-400">Sobre</a>
-    <a href="#projetos" class="block hover:text-sky-400">Projetos</a>
-    <a href="#skills" class="block hover:text-sky-400">Skills</a>
-    <a href="#contato" class="block hover:text-sky-400">Contato</a>
-  </div>
-</header>
-
-
-
-  <!-- === HERO SECTION === -->
-  <section id="hero" class="relative z-10 min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-24 md:pt-0">
-    
-    <h1 data-aos="fade-up" class="text-4xl sm:text-5xl md:text-7xl font-bold text-glow mb-6 leading-tight">
-      Leonardo Justino
-    </h1>
-
-    <p data-aos="fade-up" data-aos-delay="200" class="text-gray-300 text-base sm:text-lg md:text-2xl max-w-2xl leading-relaxed">
-      Desenvolvedor Full-Stack e Analista de Sistemas<br>
-      Criando soluções performáticas, seguras e inteligentes.
-    </p>
-
-    <div data-aos="fade-up" data-aos-delay="400" class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
-      <a href="#projetos" class="btn-primary w-full sm:w-auto">Ver Projetos</a>
-      <a href="#contato" class="btn-primary btn-alt w-full sm:w-auto">Contato</a>
-    </div>
-  </section>
-
-  <!-- === SOBRE === -->
-  <section id="sobre" class="relative z-10 px-6 py-28 md:py-40 max-w-6xl mx-auto" data-aos="fade-up">
-  <!-- Wrapper principal: usa grid para layout responsivo -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-    <!-- Coluna esquerda — Texto principal -->
-    <div class="text-left">
-      <!-- Título -->
-      <h2 class="font-orbitron text-4xl md:text-5xl text-indigo-200 mb-6 uppercase title-glow">
-        Sobre Mim
-      </h2>
-
-      <!-- Parágrafo principal (resumo) -->
-      <p class="font-rajdhani text-lg md:text-xl text-gray-200 leading-relaxed max-w-prose mb-6">
-        Sou um desenvolvedor <strong class="text-sky-400">Full-Stack</strong> com foco em <strong>PHP / Laravel</strong>,
-        integrações de <strong>APIs REST</strong> e automação de processos. Gosto de construir soluções do zero —
-        ferramentas que simplifiquem o dia a dia e entreguem resultados reais.
-      </p>
-
-      <!-- Projeto autoral / onde trabalha -->
-      <p class="font-rajdhani text-base text-gray-300 mb-6">
-        Atualmente atuo na <span class="text-sky-400 font-medium">Itceg Soluções em Tecnologia</span> e mantenho um projeto
-        autoral, o <a href="https://www.agendaideal.com.br/" class="text-indigo-300 underline hover:text-indigo-400">AgendaIdeal</a> — um sistema de agendamentos
-        em PHP puro + Slim que já gera retorno financeiro e evolui constantemente.
-      </p>
-
-      <!-- Visão e objetivo -->
-      <p class="font-rajdhani text-base text-gray-300 mb-6">
-        Minha visão: criar aplicações <em>autônomas, confiáveis e com impacto</em>. Quero trabalhar com
-        <strong class="text-sky-400">inteligência artificial aplicada ao dia a dia</strong> e, a médio prazo,
-        fundar uma startup de soluções automatizadas.
-      </p>
-
-      <!-- CTA: ver projetos, baixar CV (substituir links) -->
-      <div class="mt-6 flex flex-wrap gap-4">
-        <!-- Ver projetos -->
-        <a href="#projetos"
-           class="btn-primary inline-flex items-center gap-3">
-          Ver Projetos
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+<body>
+  <div class="page-shell">
+    <header class="site-header" id="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#hero" aria-label="Ir para o início">
+          <span class="brand-mark">LJ</span>
+          <span>Leonardo Justino</span>
         </a>
 
-        <!-- Download CV — coloque link para o arquivo PDF no repo/assets -->
-        <a href="/assets/files/Curriculo_Leonardo_Justino.pdf" target="_blank" class="btn-alt">
-          Baixar CV
-        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <!-- Link para AgendaIdeal (substitua '#') -->
-        <a href="https://www.agendaideal.com.br/" class="text-sm text-gray-300 self-center underline hover:text-sky-300">Ver AgendaIdeal</a>
+        <nav class="site-nav" id="site-menu">
+          <a href="#sobre">Sobre</a>
+          <a href="#case">AgendaIdeal</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#stack">Stack</a>
+          <a href="#contato">Contato</a>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <!-- Coluna direita — Card com destaque + skills -->
-    <div class="relative">
-      <!-- Card principal -->
-      <div class="bg-panel panel-glow p-6 rounded-2xl border border-gray-700">
-        <!-- Pequena descrição com ícone -->
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center shadow-lg">
-            <!-- ícone (SVG) -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12v8"/>
-            </svg>
+    <main>
+      <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Desenvolvedor Full Stack • PHP • Laravel • APIs REST • Produto • Automação</p>
+            <h1>Desenvolvedor full stack para produtos e operações reais.</h1>
+            <p class="hero-text">
+              Sou Leonardo Justino, desenvolvedor full stack com mais de 4 anos de experiência em sistemas web, integrações e automações. Meu foco é construir ferramentas que resolvem o dia a dia de verdade, com boa arquitetura, leitura rápida e evolução contínua.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#case">Ver case principal</a>
+              <a class="button button-secondary" href="assets/files/Curriculo_Leonardo_Justino.pdf" download="Curriculo_Leonardo_Felipe_Vieira_Justino.pdf">Baixar currículo</a>
+            </div>
+
+            <div class="hero-inline">
+              <span>Disponível para oportunidades e freelas seletivos</span>
+              <span>Foco em produto, operação e UX funcional</span>
+            </div>
+
+            <div class="signal-row">
+              <article>
+                <strong>4+ anos</strong>
+                <span>entregando sistemas em produção</span>
+              </article>
+              <article>
+                <strong>Entrega ponta a ponta</strong>
+                <span>da demanda ao código, com visão técnica e clareza de fluxo</span>
+              </article>
+              <article>
+                <strong>AgendaIdeal</strong>
+                <span>produto próprio com agenda, financeiro e operação</span>
+              </article>
+            </div>
           </div>
+
+          <aside class="hero-stage reveal" data-delay="120" aria-label="Painel visual do portfólio">
+            <div class="hero-card hero-card-main">
+              <div class="hero-card-top">
+                <span class="mini-pill">Projeto em destaque</span>
+                <span class="mini-pill mini-pill-warm">AgendaIdeal</span>
+              </div>
+              <h2>Um produto com agenda, gestão e operação no mesmo ecossistema.</h2>
+              <p>
+                AgendaIdeal é a síntese do meu jeito de construir: produto útil, interface orientada à rotina e estrutura preparada para crescer.
+              </p>
+              <div class="hero-preview hero-shot"><img src="assets/img/agendaideal/dashboard.svg" alt="Visual do dashboard administrativo do AgendaIdeal"></div>
+              <div class="hero-meta">
+                <span>Produto próprio</span>
+                <span>Fluxo real</span>
+                <span>Foco em UX operacional</span>
+              </div>
+              <div class="hero-footnote">
+                <strong>Agenda, gestão, financeiro e operação</strong>
+                <span>Uma experiência pensada para rotina diária, não para impressão momentânea.</span>
+              </div>
+            </div>
+
+            <div class="hero-card-grid">
+              <article class="hero-card hero-card-mini">
+                <span class="mini-title">Entrega</span>
+                <strong>Back-end + front-end + regra de negócio</strong>
+                <p>Atuação da demanda até a entrega em produção.</p>
+              </article>
+              <article class="hero-card hero-card-mini">
+                <span class="mini-title">Confiança</span>
+                <strong>LinkedIn, Workana e GitHub ativos</strong>
+                <p>Presença profissional em canais que reforçam prova e consistência.</p>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="trust-section">
+        <div class="container trust-panel reveal">
+          <div class="trust-copy">
+            <p class="section-kicker">O que me diferencia</p>
+            <h2>Não entrego só interface bonita. Entrego estrutura, clareza e software que aguenta rotina real.</h2>
+            <p class="trust-lead">Meu trabalho fica melhor quando o problema é concreto: operação, fluxo, regra de negócio, dados e experiência de uso precisando funcionar juntos.</p>
+          </div>
+          <div class="trust-grid">
+            <article>
+              <span class="trust-icon">01</span>
+              <h3>Leio o cenário antes do código</h3>
+              <p>Entendo a demanda, organizo a lógica e só então transformo isso em fluxo, regra e interface com direção clara.</p>
+            </article>
+            <article>
+              <span class="trust-icon">02</span>
+              <h3>Projeto pensando no depois</h3>
+              <p>Arquitetura, manutenção, escala e legibilidade fazem parte da entrega desde o início, não aparecem como correção futura.</p>
+            </article>
+            <article>
+              <span class="trust-icon">03</span>
+              <h3>Construo para uso contínuo</h3>
+              <p>Gosto de sistemas vivos, com operação diária, integração, leitura rápida e evolução constante baseada no que realmente acontece.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section about-section" id="sobre">
+        <div class="container about-grid">
+          <div class="section-copy reveal">
+            <p class="section-kicker">Sobre mim</p>
+            <h2>Mais do que codar, eu sei entender contexto, decidir direção e executar com consistência.</h2>
+            <p>
+              Atuo no desenvolvimento de aplicações web com foco em negócio, integrações REST, automação e sustentação de fluxos que precisam funcionar sem ruído.
+            </p>
+            <p>
+              Também desenvolvo projetos autorais com atenção forte a arquitetura, experiência de uso e organização técnica, porque software bom precisa continuar bom depois que entra em operação.
+            </p>
+          </div>
+
+          <div class="about-stack reveal" data-delay="120">
+            <article class="about-card accent-blue">
+              <p class="about-label">Atuação atual</p>
+              <h3>Desenvolvimento web com foco em entrega ponta a ponta</h3>
+              <p>PHP, Laravel, JavaScript, APIs, bancos relacionais e manutenção de sistemas em produção.</p>
+            </article>
+            <article class="about-card accent-mint">
+              <p class="about-label">Formação contínua</p>
+              <h3>IA, dados e segurança como base de evolução</h3>
+              <p>Pós em Ciência de Dados e Inteligência Artificial concluída, com especialização em segurança em andamento.</p>
+            </article>
+            <article class="about-card accent-gold">
+              <p class="about-label">Perfil profissional</p>
+              <h3>Calmo para executar, firme para decidir</h3>
+              <p>Consigo sair da conversa com o cliente, organizar o problema e transformar isso em algo utilizável.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section case-section" id="case">
+        <div class="container case-shell">
+          <div class="case-copy reveal">
+            <p class="section-kicker">Case principal</p>
+            <h2>AgendaIdeal é o projeto que melhor representa meu nível de profundidade hoje.</h2>
+            <p>
+              Ele reúne agenda, operação, financeiro, repasses, estoque e visão administrativa em uma experiência pensada para rotina real, não para demo vazia.
+            </p>
+            <div class="case-points">
+              <article>
+                <strong>Agenda com uso real</strong>
+                <span>Visualização semanal, disponibilidade, horários e organização do atendimento.</span>
+              </article>
+              <article>
+                <strong>Operação e gestão</strong>
+                <span>Ordens de serviço, estoque, contas, fluxo de caixa, repasses e DRE simplificada.</span>
+              </article>
+              <article>
+                <strong>Produto em evolução</strong>
+                <span>Planos, recursos, multiempresa e visão administrativa para sustentar crescimento.</span>
+              </article>
+            </div>
+            <div class="case-actions">
+              <a class="button button-primary" href="https://www.agendaideal.com.br/" target="_blank" rel="noreferrer">Acessar site</a>
+              <a class="button button-ghost" href="#projetos">Ver projetos públicos</a>
+            </div>
+          </div>
+
+          <div class="case-visual reveal" data-delay="120">
+            <article class="showcase-card showcase-wide showcase-media-card">
+              <div class="showcase-top">
+                <span class="showcase-pill">Agenda</span>
+                <span class="showcase-pill muted">Semana operacional</span>
+              </div>
+              <img class="showcase-image showcase-image-large" src="assets/img/agendaideal/agenda.svg" alt="Visual da agenda semanal do AgendaIdeal">
+            </article>
+
+            <div class="showcase-grid">
+              <article class="showcase-card showcase-media-card">
+                <div class="showcase-top">
+                  <span class="showcase-pill">Financeiro</span>
+                </div>
+                <img class="showcase-image" src="assets/img/agendaideal/financeiro.svg" alt="Visual do fluxo de caixa e repasses do AgendaIdeal">
+              </article>
+              <article class="showcase-card showcase-media-card">
+                <div class="showcase-top">
+                  <span class="showcase-pill">Administração</span>
+                </div>
+                <img class="showcase-image" src="assets/img/agendaideal/dashboard.svg" alt="Visual do dashboard administrativo do AgendaIdeal">
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section projects-section" id="projetos">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-kicker">Projetos e cases</p>
+            <h2>Projetos reais para mostrar profundidade de produto, operação e execução técnica.</h2>
+            <p>
+              Além do AgendaIdeal, estes cases ajudam a mostrar como eu penso SaaS, rotina operacional, integrações e interfaces feitas para uso real.
+            </p>
+          </div>
+
+          <div class="projects-grid projects-grid-compact">
+            <article class="project-card reveal">
+              <div class="project-top">
+                <span class="project-badge">SaaS para restaurantes</span>
+                <span class="project-year">Case real</span>
+              </div>
+              <h3>Delivery SaaS</h3>
+              <img class="project-visual" src="assets/img/delivery-saas/catalogo.svg" alt="Visual do painel de cardápio e catálogo do Delivery SaaS">
+              <p>Sistema SaaS para restaurantes desenvolvido em Laravel 12, com cardápio público por estabelecimento, pedidos online, integração com Asaas para cobrança, CRM e gestão de produtos, categorias, sabores, tamanhos e adicionais. Minha atuação foi no sistema e na plataforma operacional; a landing institucional do produto é separada. A estrutura foi pensada para operação multi-tenant e para atender pizzarias, açaiterias, hamburguerias e outros modelos de delivery.</p>
+              <ul class="project-stack">
+                <li>Laravel 12</li><li>Multi-tenant</li><li>Asaas</li><li>Cardápio público</li><li>Pedidos online</li><li>CRM</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://pedidosmais.com.br/" target="_blank" rel="noreferrer">Ver landing do produto</a>
+                <span>Case sob confidencialidade</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-delay="90">
+              <div class="project-top">
+                <span class="project-badge">Financeiro</span>
+                <span class="project-year">Projeto público</span>
+              </div>
+              <h3>Cashflow Snapshot</h3>
+              <p>Resumo financeiro com entradas, saídas, categorias, persistência local e ações manuais para demonstrar domínio de interface orientada a dados.</p>
+              <ul class="project-stack">
+                <li>JavaScript</li>
+                <li>Persistência local</li>
+                <li>UI de dados</li>
+              </ul>
+              <div class="project-links">
+                <a href="starter-projects/cashflow-snapshot/index.html" target="_blank" rel="noreferrer">Abrir projeto</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-delay="180">
+              <div class="project-top">
+                <span class="project-badge">Operação</span>
+                <span class="project-year">Projeto público</span>
+              </div>
+              <h3>Service Order Board</h3>
+              <p>Quadro operacional com drag and drop, criação de ordens, edição rápida e persistência local para simular uma rotina de atendimento e acompanhamento.</p>
+              <ul class="project-stack">
+                <li>Kanban</li>
+                <li>Drag and drop</li>
+                <li>LocalStorage</li>
+              </ul>
+              <div class="project-links">
+                <a href="starter-projects/service-order-board/index.html" target="_blank" rel="noreferrer">Abrir projeto</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section stack-section" id="stack">
+        <div class="container stack-layout">
+          <div class="section-copy reveal">
+            <p class="section-kicker">Stack e frentes</p>
+            <h2>Tecnologia, negócio e experiência de uso andando juntos.</h2>
+            <p>
+              Minha stack principal gira em torno de back-end com PHP e Laravel, APIs REST, JavaScript no front, bancos relacionais e automação. O diferencial está em conectar isso com produto, clareza de fluxo e contexto de negócio.
+            </p>
+          </div>
+
+          <div class="stack-panel reveal" data-delay="120">
+            <div class="stack-cloud">
+              <span>PHP</span>
+              <span>Laravel</span>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>APIs REST</span>
+              <span>MySQL</span>
+              <span>PostgreSQL</span>
+              <span>SQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Automação</span>
+              <span>Python</span>
+              <span>Git</span>
+              <span>UX operacional</span>
+              <span>IA aplicada</span>
+              <span>Cibersegurança</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section contact-section" id="contato">
+        <div class="container contact-shell reveal">
           <div>
-            <div class="text-sm text-gray-400">Desenvolvedor</div>
-            <div class="font-orbitron text-lg text-sky-300">Leonardo Justino</div>
-          </div>
-        </div>
-
-        <!-- Números rápidos / badges (substitua valores se quiser) -->
-        <div class="flex gap-4 items-center mb-6">
-          <div class="text-center">
-            <div class="text-2xl font-orbitron text-indigo-300">3+</div>
-            <div class="text-xs text-gray-400">Anos de experiência</div>
+            <p class="section-kicker">Contato</p>
+            <h2>Se a ideia é construir algo sólido, útil e bem resolvido, podemos conversar.</h2>
+            <p>
+              Estou aberto a oportunidades, freelas e projetos em que eu possa contribuir com desenvolvimento full stack, organização técnica e evolução de produto com mais clareza e confiança.
+            </p>
           </div>
 
-          <div class="h-10 w-px bg-gray-700/60"></div>
-
-          <div class="text-center">
-            <div class="text-2xl font-orbitron text-sky-300">+15</div>
-            <div class="text-xs text-gray-400">Projetos (pessoais / freelance)</div>
+          <div class="contact-side">
+            <div class="contact-actions">
+              <a class="button button-primary" href="mailto:leofevieira98@gmail.com">Enviar e-mail</a>
+              <a class="button button-secondary" href="https://www.linkedin.com/in/leonardojustino" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="button button-secondary" href="https://www.workana.com/freelancer/46321a66b0c4beeb9580aecaa3323ba8" target="_blank" rel="noreferrer">Workana</a>
+              <a class="button button-ghost" href="https://github.com/LeonardoFelps" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="contact-note">
+              <strong>Resposta direta e visão prática</strong>
+              <p>Se o projeto precisa sair do papel com clareza técnica, boa comunicação e execução consistente, esse é exatamente o tipo de trabalho em que gosto de entrar.</p>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <!-- Lista curta de skills (destaque) -->
-        <div class="mb-4">
-          <h4 class="font-orbitron text-sm text-indigo-200 uppercase mb-3 tracking-widest">Stack & Foco</h4>
-          <div class="flex flex-wrap gap-3">
-            <span class="skill-badge">PHP</span>
-            <span class="skill-badge">Laravel</span>
-            <span class="skill-badge">APIs REST</span>
-            <span class="skill-badge">Automação</span>
-            <span class="skill-badge">Web Scraping</span>
-            <span class="skill-badge">MySQL / SQLite</span>
-          </div>
-        </div>
-
-        <!-- Interesse / capacidades futuras (IA e dados) -->
-        <div class="mt-4">
-          <h4 class="font-orbitron text-sm text-indigo-200 uppercase mb-2 tracking-widest">Interesse</h4>
-          <p class="text-sm text-gray-300">
-            Pós-graduação em <strong class="text-sky-400">Ciência de Dados e IA</strong> — explorando aplicações práticas para
-            automatizar processos e construir produtos autônomos com impacto real.
-          </p>
-        </div>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Leonardo Justino. Portfólio pensado para destacar projetos reais, clareza técnica e evolução contínua.</p>
+        <a href="#hero">Voltar ao topo</a>
       </div>
-
-      <!-- Peça visual extra (opcional): pequena etiqueta flutuante -->
-      <div class="absolute -right-6 -top-6 hidden md:block">
-        <div class="bg-indigo-600/20 text-indigo-200 px-3 py-1 rounded-full text-xs font-rajdhani backdrop-blur-sm border border-indigo-400/10">
-          Disponível para freelances
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-  <!-- === PROJETOS === -->
-    <section id="projetos" class="relative z-10 px-6 py-32 text-center" data-aos="fade-up">
-        <h2 class="font-orbitron text-5xl text-indigo-300 mb-10 fade-in-up">Projetos em Destaque</h2>
-
-        <!-- === FILTROS DE CATEGORIA === -->
-        <div class="flex justify-center flex-wrap gap-4 mb-12">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="data">Data</button>
-            <button class="filter-btn" data-filter="security">Security</button>
-        </div>
-
-        <!-- === GRID DE PROJETOS === -->
-        <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-            <!-- Projeto 1 -->
-            <div class="project-card" data-category="web" data-project="api-automator">
-            <img src="assets/img/api-automator.png" alt="API Automator" class="rounded-xl w-full mb-5 border border-gray-700/50">
-            <h3 class="font-orbitron text-2xl text-sky-400 mb-3">API Automator</h3>
-            <p class="font-rajdhani text-gray-300 text-base">
-                Sistema web para automação e integração de APIs REST com logs e controle centralizado.
-            </p>
-            </div>
-
-            <!-- Projeto 2 -->
-            <div class="project-card" data-category="data" data-project="datavision">
-            <img src="assets/img/datavision.png" alt="DataVision" class="rounded-xl w-full mb-5 border border-gray-700/50">
-            <h3 class="font-orbitron text-2xl text-green-400 mb-3">DataVision</h3>
-            <p class="font-rajdhani text-gray-300 text-base">
-                Dashboard de análise de dados em tempo real, com integração SQL e gráficos interativos.
-            </p>
-            </div>
-
-            <!-- Projeto 3 -->
-            <div class="project-card" data-category="security" data-project="secureauth">
-            <img src="assets/img/secureauth.png" alt="SecureAuth" class="rounded-xl w-full mb-5 border border-gray-700/50">
-            <h3 class="font-orbitron text-2xl text-orange-400 mb-3">SecureAuth</h3>
-            <p class="font-rajdhani text-gray-300 text-base">
-                Sistema de autenticação segura e controle de acessos com práticas OWASP.
-            </p>
-            </div>
-
-        </div>
-
-        <!-- === Modal dos projetos === -->
-        <div id="project-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
-            <div class="bg-gray-900/90 rounded-2xl border border-gray-700/40 p-8 max-w-2xl w-full relative">
-            <button id="close-modal" class="absolute top-4 right-4 text-sky-400 hover:text-sky-200 text-2xl">&times;</button>
-
-            <img id="modal-img" src="" alt="" class="w-full rounded-xl border border-gray-700 mb-6">
-            <h3 id="modal-title" class="font-orbitron text-3xl text-indigo-300 mb-4"></h3>
-            <p id="modal-desc" class="font-rajdhani text-gray-300 text-lg leading-relaxed mb-6"></p>
-
-            <p id="modal-stack" class="font-rajdhani text-sky-400 text-base mb-8"></p>
-
-            <div id="modal-links" class="flex justify-center gap-6">
-                <a href="#" id="modal-github" target="_blank" class="btn-primary">GitHub</a>
-                <a href="#" id="modal-demo" target="_blank" class="btn-alt">Demo</a>
-            </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-  <!-- === SKILLS === -->
-  <section id="skills" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center" data-aos="fade-up">
-    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-10 fade-in-up">Competências</h2>
-
-    <div class="flex flex-wrap justify-center gap-3 sm:gap-5 max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
-      <span class="skill-badge">PHP / Laravel</span>
-      <span class="skill-badge">JavaScript / APIs REST</span>
-      <span class="skill-badge">SQL / MySQL</span>
-      <span class="skill-badge">Python / Data Analysis</span>
-      <span class="skill-badge">Cybersecurity</span>
-    </div>
-  </section>
-
-  <!-- === CONTATO === -->
-  <section id="contato" class="relative z-10 px-4 sm:px-6 py-20 md:py-32 text-center max-w-3xl mx-auto" data-aos="fade-up">
-    <h2 class="font-orbitron text-3xl sm:text-4xl md:text-5xl text-indigo-300 mb-8 md:mb-10 fade-in-up">Contato</h2>
-
-    <p class="font-rajdhani text-base sm:text-lg md:text-xl text-gray-300 mb-8">
-      Aberto a novas oportunidades, colaborações e desafios técnicos.<br>
-      Vamos conversar sobre tecnologia e inovação?
-    </p>
-
-    <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6">
-      <a href="mailto:leofevieira98@gmail.com" class="btn-primary w-full sm:w-auto">E-mail</a>
-      <a href="https://www.linkedin.com/in/leonardo-justino-413031193/" target="_blank" class="btn-primary btn-alt w-full sm:w-auto">LinkedIn</a>
-      <a href="https://github.com/LeonardoFelps" target="_blank" class="btn-primary w-full sm:w-auto">GitHub</a>
-    </div>
-  </section>
-
-
-    <button id="backToTop" class="hidden fixed bottom-6 right-6 bg-sky-500/20 border border-sky-400/40 text-sky-300 p-3 rounded-full backdrop-blur-sm hover:bg-sky-500/30 transition-all">
-        ↑
-    </button>
-
-
-    <!-- === FOOTER === -->
-    <footer class="relative z-10 py-6 text-center text-gray-500 text-xs sm:text-sm">
-        © <span id="year"></span> Leonardo Justino. Desenvolvido com <span class="text-sky-400">Aurora Tech</span>.
     </footer>
+  </div>
 
-    <!-- === SCRIPTS === -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
-
-  
-
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

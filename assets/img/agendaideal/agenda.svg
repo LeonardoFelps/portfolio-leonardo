@@ -1,0 +1,125 @@
+﻿<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B2A"/>
+      <stop offset="1" stop-color="#0A1320"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1A2433"/>
+      <stop offset="1" stop-color="#161F2D"/>
+    </linearGradient>
+    <linearGradient id="eventA" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#40D8F4"/>
+      <stop offset="1" stop-color="#5D6CFF"/>
+    </linearGradient>
+    <linearGradient id="eventB" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7EF2C9"/>
+      <stop offset="1" stop-color="#3EA3F7"/>
+    </linearGradient>
+    <linearGradient id="eventC" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F3B57A"/>
+      <stop offset="1" stop-color="#7A5D5E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1600" height="56" rx="28" fill="#1A2331"/>
+  <circle cx="1544" cy="28" r="18" fill="#6FA8FF"/>
+  <rect x="20" y="64" width="1560" height="816" rx="24" fill="#151E2B" stroke="#2A3446"/>
+  <text x="34" y="42" fill="#93A6C4" font-size="18" font-family="Arial, sans-serif">Agenda</text>
+  <text x="775" y="112" fill="#F2F5FA" font-size="22" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle">15 - 21 de mar. de 2026</text>
+  <rect x="46" y="88" width="46" height="32" rx="10" fill="#202B3D" stroke="#37435A"/>
+  <path d="M73 104L63 94M73 104L63 114" stroke="#F1F5FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="96" y="88" width="46" height="32" rx="10" fill="#202B3D" stroke="#37435A"/>
+  <path d="M115 104L125 94M115 104L125 114" stroke="#F1F5FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="152" y="88" width="50" height="32" rx="12" fill="#202B3D" stroke="#37435A"/>
+  <text x="177" y="109" fill="#EAF1FC" font-size="14" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle">Hoje</text>
+  <rect x="1428" y="88" width="140" height="32" rx="12" fill="#202B3D" stroke="#37435A"/>
+  <rect x="1474" y="88" width="74" height="32" rx="0" fill="#39D0F0"/>
+  <text x="1454" y="109" fill="#EAF1FC" font-size="14" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle">Mês</text>
+  <text x="1511" y="109" fill="#F8FCFF" font-size="14" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle">Semana</text>
+  <text x="1558" y="109" fill="#EAF1FC" font-size="14" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle">Dia</text>
+
+  <g stroke="#212B3C" stroke-width="1">
+    <line x1="108" y1="148" x2="108" y2="848"/>
+    <line x1="312" y1="148" x2="312" y2="848"/>
+    <line x1="516" y1="148" x2="516" y2="848"/>
+    <line x1="720" y1="148" x2="720" y2="848"/>
+    <line x1="924" y1="148" x2="924" y2="848"/>
+    <line x1="1128" y1="148" x2="1128" y2="848"/>
+    <line x1="1332" y1="148" x2="1332" y2="848"/>
+    <line x1="1536" y1="148" x2="1536" y2="848"/>
+  </g>
+  <g stroke="#1F2939" stroke-width="1">
+    <line x1="42" y1="172" x2="1536" y2="172"/>
+    <line x1="42" y1="224" x2="1536" y2="224"/>
+    <line x1="42" y1="276" x2="1536" y2="276"/>
+    <line x1="42" y1="328" x2="1536" y2="328"/>
+    <line x1="42" y1="380" x2="1536" y2="380"/>
+    <line x1="42" y1="432" x2="1536" y2="432"/>
+    <line x1="42" y1="484" x2="1536" y2="484"/>
+    <line x1="42" y1="536" x2="1536" y2="536"/>
+    <line x1="42" y1="588" x2="1536" y2="588"/>
+    <line x1="42" y1="640" x2="1536" y2="640"/>
+    <line x1="42" y1="692" x2="1536" y2="692"/>
+    <line x1="42" y1="744" x2="1536" y2="744"/>
+    <line x1="42" y1="796" x2="1536" y2="796"/>
+  </g>
+  <rect x="516" y="172" width="204" height="676" fill="#122733" opacity="0.9"/>
+  <rect x="108" y="172" width="204" height="676" fill="#2A1F28" opacity="0.42"/>
+  <rect x="312" y="172" width="204" height="676" fill="#2A1F28" opacity="0.35"/>
+  <text x="176" y="160" fill="#A9B4C8" font-size="14" font-weight="700" font-family="Arial, sans-serif">dom. 15/03</text>
+  <text x="379" y="160" fill="#A9B4C8" font-size="14" font-weight="700" font-family="Arial, sans-serif">seg. 16/03</text>
+  <text x="584" y="160" fill="#A9B4C8" font-size="14" font-weight="700" font-family="Arial, sans-serif">ter. 17/03</text>
+  <text x="788" y="160" fill="#A9B4C8" font-size="14" font-weight="700" font-family="Arial, sans-serif">qua. 18/03</text>
+  <text x="992" y="160" fill="#A9B4C8" font-size="14" font-weight="700" font-family="Arial, sans-serif">qui. 19/03</text>
+  <text x="1196" y="160" fill="#A9B4C8" font-size="14" font-weight="700" font-family="Arial, sans-serif">sex. 20/03</text>
+  <text x="1400" y="160" fill="#A9B4C8" font-size="14" font-weight="700" font-family="Arial, sans-serif">sáb. 21/03</text>
+
+  <g fill="#9CA9BF" font-size="14" font-family="Arial, sans-serif">
+    <text x="80" y="244">07</text>
+    <text x="80" y="296">08</text>
+    <text x="80" y="348">09</text>
+    <text x="80" y="400">10</text>
+    <text x="80" y="452">11</text>
+    <text x="80" y="504">12</text>
+    <text x="80" y="556">13</text>
+    <text x="80" y="608">14</text>
+    <text x="80" y="660">15</text>
+    <text x="80" y="712">16</text>
+    <text x="80" y="764">17</text>
+  </g>
+
+  <rect x="320" y="325" width="180" height="20" rx="10" fill="url(#eventB)" opacity="0.8"/>
+  <rect x="320" y="377" width="180" height="28" rx="14" fill="url(#eventA)" opacity="0.75"/>
+  <rect x="320" y="429" width="132" height="48" rx="14" fill="url(#eventA)" opacity="0.82"/>
+  <rect x="320" y="585" width="180" height="48" rx="14" fill="url(#eventA)" opacity="0.8"/>
+  <rect x="320" y="637" width="180" height="20" rx="10" fill="url(#eventB)" opacity="0.78"/>
+  <rect x="320" y="689" width="180" height="100" rx="14" fill="url(#eventC)" opacity="0.72"/>
+
+  <rect x="525" y="325" width="190" height="24" rx="12" fill="url(#eventB)" opacity="0.82"/>
+  <rect x="525" y="585" width="190" height="16" rx="8" fill="url(#eventB)" opacity="0.76"/>
+  <rect x="525" y="637" width="190" height="16" rx="8" fill="url(#eventB)" opacity="0.76"/>
+  <rect x="525" y="689" width="110" height="28" rx="14" fill="url(#eventA)" opacity="0.7"/>
+
+  <rect x="725" y="325" width="200" height="50" rx="16" fill="url(#eventA)" opacity="0.78"/>
+  <rect x="725" y="429" width="200" height="100" rx="16" fill="url(#eventC)" opacity="0.74"/>
+  <rect x="725" y="637" width="200" height="36" rx="18" fill="url(#eventB)" opacity="0.72"/>
+  <rect x="725" y="689" width="200" height="28" rx="14" fill="url(#eventA)" opacity="0.72"/>
+  <rect x="725" y="729" width="200" height="24" rx="12" fill="url(#eventA)" opacity="0.72"/>
+
+  <rect x="930" y="429" width="190" height="100" rx="16" fill="url(#eventC)" opacity="0.76"/>
+  <rect x="930" y="585" width="190" height="48" rx="14" fill="url(#eventA)" opacity="0.8"/>
+  <rect x="930" y="637" width="190" height="16" rx="8" fill="url(#eventB)" opacity="0.75"/>
+  <rect x="930" y="689" width="190" height="48" rx="14" fill="url(#eventA)" opacity="0.8"/>
+  <rect x="930" y="741" width="190" height="40" rx="14" fill="url(#eventA)" opacity="0.8"/>
+
+  <rect x="1130" y="325" width="180" height="18" rx="9" fill="url(#eventA)" opacity="0.8"/>
+  <rect x="1130" y="377" width="180" height="48" rx="14" fill="url(#eventA)" opacity="0.8"/>
+  <rect x="1130" y="637" width="180" height="100" rx="16" fill="url(#eventC)" opacity="0.74"/>
+  <rect x="1130" y="741" width="180" height="100" rx="16" fill="url(#eventC)" opacity="0.74"/>
+
+  <rect x="1335" y="429" width="190" height="28" rx="14" fill="url(#eventB)" opacity="0.78"/>
+  <rect x="1335" y="585" width="190" height="16" rx="8" fill="url(#eventB)" opacity="0.76"/>
+  <rect x="1335" y="637" width="190" height="28" rx="14" fill="url(#eventA)" opacity="0.76"/>
+
+</svg>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Order Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Projeto publico</p>
+      <h1>Service Order Board</h1>
+      <p class="lead">Quadro visual para acompanhar ordens de servico por etapa, prioridade e responsavel.</p>
+    </header>
+
+    <section class="toolbar panel">
+      <input id="search" type="search" placeholder="Buscar cliente, servico ou responsavel">
+      <select id="priority-filter">
+        <option value="all">Todas as prioridades</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baixa">Baixa</option>
+      </select>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel side-panel">
+        <div class="panel-head">
+          <h2>Nova ordem</h2>
+          <span>Persistencia local</span>
+        </div>
+
+        <form id="order-form" class="order-form">
+          <label>
+            <span>Titulo</span>
+            <input name="title" type="text" placeholder="Ex: Ajuste no cadastro" required>
+          </label>
+          <label>
+            <span>Cliente</span>
+            <input name="client" type="text" placeholder="Ex: AgendaIdeal" required>
+          </label>
+          <label>
+            <span>Responsavel</span>
+            <input name="owner" type="text" placeholder="Ex: Leonardo" required>
+          </label>
+          <label>
+            <span>Prioridade</span>
+            <select name="priority">
+              <option value="Alta">Alta</option>
+              <option value="Media" selected>Media</option>
+              <option value="Baixa">Baixa</option>
+            </select>
+          </label>
+          <label>
+            <span>Status inicial</span>
+            <select name="status">
+              <option value="backlog">Backlog</option>
+              <option value="analysis">Em analise</option>
+              <option value="progress">Em execucao</option>
+              <option value="done">Concluido</option>
+            </select>
+          </label>
+          <button class="primary-btn" type="submit">Adicionar ordem</button>
+        </form>
+
+        <div class="panel-head compact">
+          <h2>Resumo</h2>
+        </div>
+        <div class="summary" id="summary"></div>
+      </aside>
+
+      <section class="board-area">
+        <section class="board" id="board"></section>
+      </section>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
