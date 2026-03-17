@@ -857,6 +857,31 @@ select {
   padding-top: 1.2rem;
 }
 
+.footer-meta {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.visit-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(115, 167, 255, 0.16);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.visit-counter::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 16px rgba(125, 242, 200, 0.35);
+}
+
 .footer-wrap p,
 .footer-wrap a {
   color: var(--muted);
@@ -968,6 +993,8 @@ select {
 
   
 }
+
+
 
 
 
