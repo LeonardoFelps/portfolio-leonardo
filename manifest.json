@@ -1,9 +1,17 @@
-﻿{
+{
   "name": "Portfólio Leonardo Justino",
   "short_name": "LJ Dev",
-  "start_url": "/",
+  "start_url": "/portfolio-leonardo/",
+  "scope": "/portfolio-leonardo/",
   "display": "standalone",
   "background_color": "#0b1120",
   "theme_color": "#38bdf8",
-  "icons": []
+  "icons": [
+    {
+      "src": "/portfolio-leonardo/assets/img/agendaideal/dashboard.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
 }
