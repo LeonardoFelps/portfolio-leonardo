@@ -4,13 +4,13 @@
   "start_url": "/portfolio-leonardo/",
   "scope": "/portfolio-leonardo/",
   "display": "standalone",
-  "background_color": "#0b1120",
-  "theme_color": "#38bdf8",
+  "background_color": "#f3f6fb",
+  "theme_color": "#0c1424",
   "icons": [
     {
-      "src": "/portfolio-leonardo/assets/img/agendaideal/dashboard.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "assets/img/workana/agendaideal/hero-cover.png",
+      "sizes": "1366x768",
+      "type": "image/png",
       "purpose": "any"
     }
   ]
